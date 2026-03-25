@@ -1,10 +1,7 @@
 """Tests for `example_pkg.states_info`."""
 
-from pathlib import Path
-
 import pytest
-
-from example_pkg.states_info import (
+from example_pkg.states_info import (  # type: ignore
     is_city_capitol_of_state,
     slow_add,
 )

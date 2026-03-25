@@ -23,7 +23,7 @@
     ],
     "[python]": {
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": "explicit"
         },
         "editor.formatOnSave": true,
     },
@@ -41,4 +41,5 @@
             "color": "lightgreen"
         }
     ],
+    "C_Cpp.copilotHover": "disabled",
 }
