@@ -1,5 +1,4 @@
 name: Test and lint
-
 on:
   pull_request:
     types: [opened, synchronize]
@@ -19,7 +18,7 @@ jobs:
         run: |
           git tag $(cat version.txt)
 
-  lint-format-and-static-code-checks:
+  linting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -30,7 +29,7 @@ jobs:
       - name: Install pre-commit
         run: |
           pip install pre-commit
-      - name: Lint, Format, and other static code quality checks
+      - name: Linting
         run: |
           /bin/bash -x run.sh lint:ci
 
@@ -42,7 +41,7 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.12.7
-      - name: Lint, Format, and other static code quality checks
+      - name: Testing
         run: |
           make install
           make test
@@ -50,7 +49,7 @@ jobs:
   push-tags:
     needs:
       - execute-tests
-      - lint-format-and-static-code-checks
+      - linting
       - check-version-txt
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'

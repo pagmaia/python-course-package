@@ -5,7 +5,7 @@ from uuid import uuid4
 
 import pytest
 
-from tests.utils.project import (
+from test_package.utils.project import (
     generate_project,
     init_git_repo,
 )

@@ -4,9 +4,22 @@ markers = ["slow: marks tests as slow (deselect with '-m \"not slow\"')"]
 [tool.black]
 line-length = 119
 
+[tool.pylint]
+disable = ["missing-module-docstring", "subprocess-run-check"]
+
 [tool.flake8]
 docstring-convention = "all"
-ignore = ["D107", "D212", "E501", "W503", "W605", "D203", "D100"]
+ignore = [
+    "D107",
+    "D212",
+    "E501",
+    "W503",
+    "W605",
+    "D203",
+    "D100",
+    "D103",
+    "D104",
+]
 max-line-length = 119
 
 # radon
