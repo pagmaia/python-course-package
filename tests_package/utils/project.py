@@ -18,7 +18,7 @@ def generate_project(template: Dict[str, str], test_session_id: str):
     template_values = deepcopy(template)
     cookiecutter_config = {"default_context": template_values}
 
-    cookiecutter_config_fpath = PROJECT_DIR / f"tests/cookiecutter-{test_session_id}.json"
+    cookiecutter_config_fpath = PROJECT_DIR / f"tests_package/cookiecutter-{test_session_id}.json"
     cookiecutter_config_fpath.write_text(json.dumps(cookiecutter_config))
 
     subprocess.run(

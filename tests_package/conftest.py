@@ -1,1 +1,1 @@
-pytest_plugins = ["tests.fixtures.setup_dir"]
+pytest_plugins = ["tests_package.fixtures.setup_dir"]
