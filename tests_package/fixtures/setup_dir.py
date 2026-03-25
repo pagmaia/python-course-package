@@ -15,7 +15,11 @@ from tests_package.utils.project import (
 def setup_dir() -> Path:  # type: ignore
     test_session_id: str = generate_test_session_id()
     generated_repo_dir: Path = generate_project(
-        template={"repo_name": f"repo_test-{test_session_id}"}, test_session_id=test_session_id
+        template={
+            "repo_name": f"repo_test-{test_session_id}",
+            "package_import_name": f"test_package_{test_session_id}",
+        },
+        test_session_id=test_session_id,
     )
     try:
         init_git_repo(generated_repo_dir)

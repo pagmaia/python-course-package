@@ -1,3 +1,4 @@
 {
-    "repo_name": "repo_test"
+    "repo_name": "repo_test",
+    "package_import_name": "example_package"
 }

@@ -1,7 +1,5 @@
-"""Tests for `example_pkg.states_info`."""
-
 import pytest
-from example_pkg.states_info import (  # type: ignore
+from {{cookiecutter.package_import_name}}.states_info import (  # type: ignore
     is_city_capitol_of_state,
     slow_add,
 )
