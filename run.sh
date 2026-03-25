@@ -99,7 +99,7 @@ function test:wheel-locally {
     deactivate || true
 }
 
-ffunction push-initial-readme-to-repo {
+function push-initial-readme-to-repo {
     rm -rf "$REPO_NAME"
     gh repo clone "$GITHUB_USERNAME/$REPO_NAME"
     cd "$REPO_NAME"
