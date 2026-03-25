@@ -17,6 +17,7 @@ from example_pkg.states_info import (  # type: ignore
     ],
 )
 def test__is_city_capitol_of_state(city_name: str, state: str, is_capitol: bool):
+    """Assert se a cidade é capital do estado."""
     assert is_city_capitol_of_state(city_name=city_name, state=state) == is_capitol
 
 

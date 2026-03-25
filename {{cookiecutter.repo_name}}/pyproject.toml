@@ -3,8 +3,8 @@
 requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
-# [tool.setuptools.package-data]
-# example_pkg = ["*.json"]
+[tool.setuptools.package-data]
+example_pkg = ["*.json"]
 
 [project]
 name = "python-course-package"
@@ -34,9 +34,22 @@ markers = ["slow: marks tests as slow (deselect with '-m \"not slow\"')"]
 [tool.black]
 line-length = 119
 
+[tool.pylint]
+disable = ["missing-module-docstring"]
+
 [tool.flake8]
 docstring-convention = "all"
-ignore = ["D107", "D212", "E501", "W503", "W605", "D203", "D100"]
+ignore = [
+    "D107",
+    "D212",
+    "E501",
+    "W503",
+    "W605",
+    "D203",
+    "D100",
+    "D103",
+    "D104",
+]
 max-line-length = 119
 
 # radon
